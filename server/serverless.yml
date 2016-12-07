@@ -1,0 +1,167 @@
+service: sugartrek
+
+provider:
+  name: aws
+  stage: dev
+  region: us-east-1
+  iamRoleStatements:
+    - Effect: Allow
+      Resource: "*"
+      Action:
+      - dynamodb:*
+
+runtime: nodejs4.3
+
+functions:
+  signup:
+    handler: handler.signup
+    events:
+        - http:
+            path: signup_user
+            method: post
+            cors: true
+  login:
+    handler: handler.login
+    events:
+        - http:
+            path: login_user
+            method: post
+            cors: true
+  forgotPassword:
+    handler: handler.forgotPassword
+    events:
+        - http:
+            path: forgot_password
+            method: post
+            cors: true
+  charge:
+    handler: handler.charge
+  sendPush:
+    handler: handler.sendPush
+  getPromotions:
+    handler: handler.getPromotions
+    events:
+        - http:
+            path: get_promotions
+            method: get
+            cors: true
+  savePromotion:
+    handler: handler.savePromotion
+    events:
+        - http:
+            path: save_promotion
+            method: post
+            cors: true
+  savePromotionInstance:
+    handler: handler.savePromotionInstance
+    events:
+        - http:
+            path: save_promotion_instance
+            method: post
+            cors: true
+  saveBusinessLogin:
+    handler: handler.saveBusinessLogin
+    events:
+        - http:
+            path: save_business_login
+            method: post
+            cors: true
+  sendNotificationsForPromotion:
+    handler: handler.sendNotificationsForPromotion
+    events:
+        - http:
+            path: send_notification_for_promotion
+            method: post
+            cors: true
+
+resources:
+  Resources:
+    UserTable:
+      Type: "AWS::DynamoDB::Table"
+      Properties:
+        AttributeDefinitions:
+        - AttributeName: "userId"
+          AttributeType: "S"
+        KeySchema:
+        - AttributeName: "userId"
+          KeyType: "HASH"
+        ProvisionedThroughput:
+          ReadCapacityUnits: 5
+          WriteCapacityUnits: 5
+        TableName: "SugarTrek_User"
+    PromotionInstanceTable:
+      Type: "AWS::DynamoDB::Table"
+      Properties:
+        AttributeDefinitions:
+        - AttributeName: "promotionInstanceId"
+          AttributeType: "S"
+        KeySchema:
+        - AttributeName: "promotionInstanceId"
+          KeyType: "HASH"
+        ProvisionedThroughput:
+          ReadCapacityUnits: 5
+          WriteCapacityUnits: 5
+        TableName: "SugarTrek_PromotionInstance"
+    PromotionTable:
+      Type: "AWS::DynamoDB::Table"
+      Properties:
+        AttributeDefinitions:
+        - AttributeName: "promotionId"
+          AttributeType: "S"
+        KeySchema:
+        - AttributeName: "promotionId"
+          KeyType: "HASH"
+        ProvisionedThroughput:
+          ReadCapacityUnits: 5
+          WriteCapacityUnits: 5
+        TableName: "SugarTrek_Promotion"
+    FriendTable:
+      Type: "AWS::DynamoDB::Table"
+      Properties:
+        AttributeDefinitions:
+        - AttributeName: "friendId"
+          AttributeType: "S"
+        KeySchema:
+        - AttributeName: "friendId"
+          KeyType: "HASH"
+        ProvisionedThroughput:
+          ReadCapacityUnits: 5
+          WriteCapacityUnits: 5
+        TableName: "SugarTrek_Friend"
+    BusinessTable:
+      Type: "AWS::DynamoDB::Table"
+      Properties:
+        AttributeDefinitions:
+        - AttributeName: "businessId"
+          AttributeType: "S"
+        KeySchema:
+        - AttributeName: "businessId"
+          KeyType: "HASH"
+        ProvisionedThroughput:
+          ReadCapacityUnits: 5
+          WriteCapacityUnits: 5
+        TableName: "SugarTrek_Business"
+    MessageTable:
+      Type: "AWS::DynamoDB::Table"
+      Properties:
+        AttributeDefinitions:
+        - AttributeName: "messageId"
+          AttributeType: "S"
+        KeySchema:
+        - AttributeName: "messageId"
+          KeyType: "HASH"
+        ProvisionedThroughput:
+          ReadCapacityUnits: 5
+          WriteCapacityUnits: 5
+        TableName: "SugarTrek_Message"
+    S3Bucket:
+      Type: "AWS::S3::Bucket"
+      Properties:
+        BucketName: sugartrek.com
+    S3Bucket2:
+      Type: "AWS::S3::Bucket"
+      Properties:
+        BucketName: www.sugartrek.com
+
+plugins:
+  - serverless-run-function-plugin

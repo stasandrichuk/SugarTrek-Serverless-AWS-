@@ -1,0 +1,26 @@
+{
+  "name": "sugartrek",
+  "version": "1.0.0",
+  "description": "",
+  "main": "handler.js",
+  "dependencies": {
+    "async": "^2.1.2",
+    "bluebird": "^3.4.6",
+    "fcm-push": "^1.1.0",
+    "geolib": "^2.0.22",
+    "moment": "^2.15.2",
+    "simple-encryptor": "^1.1.0",
+    "stripe": "^4.11.0",
+    "uuid": "^2.0.3"
+  },
+  "devDependencies": {
+    "aws-sdk": "^2.6.6",
+    "serverless-run-function-plugin": "0.0.4"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

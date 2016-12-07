@@ -1,0 +1,13 @@
+Setting up environment:
+
+Setup Serverless:
+- aws configure using credentials
+- serverless create --template aws-nodejs
+
+Setup package.json file
+- npm init --yes
+- install packages using npm install <package> --save or npm install <package> --save-dev
+
+Setup dev dependecies
+- npm install --save-dev serverless-run-function-plugin
+- npm install --save-dev aws-sdk
