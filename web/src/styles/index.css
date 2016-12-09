@@ -52,3 +52,10 @@ img {
 .div-main {
     clear:right;
 }
+.div-Game{
+  margin : auto;
+  border: 0px;
+  width: 1150px;
+  height: 792px;
+  align: center;
+}
