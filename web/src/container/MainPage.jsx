@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import FlatButton from 'material-ui/FlatButton/FlatButton';
 import logo from '../images/sugartrek_logo.png';
-import game from '../sugartrek-unity/game.html';
+import loading from '../images/gameloading.gif';
 import '../styles/index.css';
 
 class MainPage extends Component {
@@ -31,9 +31,7 @@ class MainPage extends Component {
                     <div className="div-logo"><img alt="sugartrek logo" src={logo} /></div>
                     <h2>SugarTrek Game</h2>
                   <div className="div-Game">
-                  <iframe src={game} width="1150" height="650" frameborder="0" scrolling="no"></iframe>
-
-
+                  <iframe src="http://sugartrek.com/static/media/sugartrek-unity/game.html" width="996px" height="528px" scrolling="no"></iframe>
                   </div>
                 </div>
             </div>
