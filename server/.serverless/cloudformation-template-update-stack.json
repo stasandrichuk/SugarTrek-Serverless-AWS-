@@ -66,7 +66,7 @@
           "S3Bucket": {
             "Ref": "ServerlessDeploymentBucket"
           },
-          "S3Key": "1481148606919-2016-12-07T22:10:06.919Z/sugartrek.zip"
+          "S3Key": "1481652414668-2016-12-13T18:06:54.668Z/sugartrek.zip"
         },
         "FunctionName": "sugartrek-dev-signup",
         "Handler": "handler.signup",
@@ -88,7 +88,7 @@
           "S3Bucket": {
             "Ref": "ServerlessDeploymentBucket"
           },
-          "S3Key": "1481148606919-2016-12-07T22:10:06.919Z/sugartrek.zip"
+          "S3Key": "1481652414668-2016-12-13T18:06:54.668Z/sugartrek.zip"
         },
         "FunctionName": "sugartrek-dev-login",
         "Handler": "handler.login",
@@ -110,7 +110,7 @@
           "S3Bucket": {
             "Ref": "ServerlessDeploymentBucket"
           },
-          "S3Key": "1481148606919-2016-12-07T22:10:06.919Z/sugartrek.zip"
+          "S3Key": "1481652414668-2016-12-13T18:06:54.668Z/sugartrek.zip"
         },
         "FunctionName": "sugartrek-dev-forgotPassword",
         "Handler": "handler.forgotPassword",
@@ -132,7 +132,7 @@
           "S3Bucket": {
             "Ref": "ServerlessDeploymentBucket"
           },
-          "S3Key": "1481148606919-2016-12-07T22:10:06.919Z/sugartrek.zip"
+          "S3Key": "1481652414668-2016-12-13T18:06:54.668Z/sugartrek.zip"
         },
         "FunctionName": "sugartrek-dev-charge",
         "Handler": "handler.charge",
@@ -154,7 +154,7 @@
           "S3Bucket": {
             "Ref": "ServerlessDeploymentBucket"
           },
-          "S3Key": "1481148606919-2016-12-07T22:10:06.919Z/sugartrek.zip"
+          "S3Key": "1481652414668-2016-12-13T18:06:54.668Z/sugartrek.zip"
         },
         "FunctionName": "sugartrek-dev-sendPush",
         "Handler": "handler.sendPush",
@@ -176,7 +176,7 @@
           "S3Bucket": {
             "Ref": "ServerlessDeploymentBucket"
           },
-          "S3Key": "1481148606919-2016-12-07T22:10:06.919Z/sugartrek.zip"
+          "S3Key": "1481652414668-2016-12-13T18:06:54.668Z/sugartrek.zip"
         },
         "FunctionName": "sugartrek-dev-getPromotions",
         "Handler": "handler.getPromotions",
@@ -198,7 +198,7 @@
           "S3Bucket": {
             "Ref": "ServerlessDeploymentBucket"
           },
-          "S3Key": "1481148606919-2016-12-07T22:10:06.919Z/sugartrek.zip"
+          "S3Key": "1481652414668-2016-12-13T18:06:54.668Z/sugartrek.zip"
         },
         "FunctionName": "sugartrek-dev-savePromotion",
         "Handler": "handler.savePromotion",
@@ -220,7 +220,7 @@
           "S3Bucket": {
             "Ref": "ServerlessDeploymentBucket"
           },
-          "S3Key": "1481148606919-2016-12-07T22:10:06.919Z/sugartrek.zip"
+          "S3Key": "1481652414668-2016-12-13T18:06:54.668Z/sugartrek.zip"
         },
         "FunctionName": "sugartrek-dev-savePromotionInstance",
         "Handler": "handler.savePromotionInstance",
@@ -242,7 +242,7 @@
           "S3Bucket": {
             "Ref": "ServerlessDeploymentBucket"
           },
-          "S3Key": "1481148606919-2016-12-07T22:10:06.919Z/sugartrek.zip"
+          "S3Key": "1481652414668-2016-12-13T18:06:54.668Z/sugartrek.zip"
         },
         "FunctionName": "sugartrek-dev-saveBusinessLogin",
         "Handler": "handler.saveBusinessLogin",
@@ -264,7 +264,7 @@
           "S3Bucket": {
             "Ref": "ServerlessDeploymentBucket"
           },
-          "S3Key": "1481148606919-2016-12-07T22:10:06.919Z/sugartrek.zip"
+          "S3Key": "1481652414668-2016-12-13T18:06:54.668Z/sugartrek.zip"
         },
         "FunctionName": "sugartrek-dev-sendNotificationsForPromotion",
         "Handler": "handler.sendNotificationsForPromotion",
@@ -1685,7 +1685,7 @@
         }
       }
     },
-    "ApiGatewayDeployment1481148606966": {
+    "ApiGatewayDeployment1481652414689": {
       "Type": "AWS::ApiGateway::Deployment",
       "Properties": {
         "RestApiId": {
@@ -1943,13 +1943,13 @@
     "S3Bucket": {
       "Type": "AWS::S3::Bucket",
       "Properties": {
-        "BucketName": "sugartrek.com"
+        "BucketName": "sugartrektmp.com"
       }
     },
     "S3Bucket2": {
       "Type": "AWS::S3::Bucket",
       "Properties": {
-        "BucketName": "www.sugartrek.com"
+        "BucketName": "www.sugartrektmp.com"
       }
     }
   },

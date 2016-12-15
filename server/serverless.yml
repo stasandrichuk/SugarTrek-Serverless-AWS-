@@ -157,11 +157,11 @@ resources:
     S3Bucket:
       Type: "AWS::S3::Bucket"
       Properties:
-        BucketName: sugartrek.com
+        BucketName: sugartrektmp.com
     S3Bucket2:
       Type: "AWS::S3::Bucket"
       Properties:
-        BucketName: www.sugartrek.com
+        BucketName: www.sugartrektmp.com
 
 plugins:
   - serverless-run-function-plugin

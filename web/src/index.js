@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {Router, Route, hashHistory} from 'react-router'
 import App from './container/App';
-import ComingSoonPage from './container/ComingSoonPage'
+//import ComingSoonPage from './container/ComingSoonPage'
 import MainPage from './container/MainPage';
 import LoginPage from './container/LoginPage';
 import SignupPage from './container/SignupPage'
@@ -33,7 +33,7 @@ const muiTheme = getMuiTheme({
 });
 
 const routes = <Route component={App}>
-    <Route path="/" component={ComingSoonPage} />
+    <Route path="/" component={MainPage} />
     <Route path="/main" component={MainPage} />
     <Route path="/login" component={LoginPage} />
     <Route path="/signup" component={SignupPage} />
